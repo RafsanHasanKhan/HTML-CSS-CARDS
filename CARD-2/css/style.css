@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.service-area {
+  background-color: #1c1c1c;
+}
+.service {
+  padding: 5% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service .service-title {
+  text-align: center;
+}
+.service .service-title h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.service .service-title p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 60%;
+  display: inline-block;
+}
+.service .services {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 50px;
+  gap: 20px;
+}
+.service .services .single-service-card {
+  width: 370px;
+  height: 330px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3% 8%;
+  border-radius: 8px;
+  transition: .6s;
+}
+.service .services .single-service-card:hover {
+  background: linear-gradient(90deg, #d40442, #f35500);
+  transform: translateY(-8px);
+}
+.service .services .single-service-card i {
+  color: crimson;
+  margin: 40px 0px 15px 0px;
+  font-size: 2.5rem;
+}
+.service .services .single-service-card h2 {
+  text-align: left;
+  width: 100%;
+  margin: 20px 0px;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.service .services .single-service-card:hover i, .single-service-card:hover h2, .single-service-card:hover p {
+  color: #fff;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .service .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service .service-title h1 {
+    font-size: 2rem;
+  }
+  .service .services .single-service-card {
+    width: 320px;
+    height: 280px;
+  }
+  .service .services .single-service-card i {
+    margin: 20px 0px 8px 0px;
+  }
+  .service .services .single-service-card h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .service .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service .service-title h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .service .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .service .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .service .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .service .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
