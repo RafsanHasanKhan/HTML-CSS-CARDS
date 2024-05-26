@@ -12,6 +12,9 @@
   padding: 100px 0;
   background-color: #191a2b;
 }
+.service {
+  background-color: #191a2b;
+}
 .service .service-title{
   text-align: center;
 }
@@ -64,5 +67,134 @@
   }
 }
 .services {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.services .single-service-card {
+  background-color: #1c2335;
+  padding: 3% 8%;
+  border: 2px solid rgb(144, 226 , 174, 0.2);
+  border-radius: 8px;
+  transition: .6s;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.services .single-service-card:hover {
+  background-color: transparent;
+  transform: translateY(-8px);
+  border-color: #00ff37;
+}
+.services .single-service-card::after{
+  content: '';
+  background-color: #fff;
+  width: 120%;
+  height: 20px;
+  filter: blur(30px);
+  opacity: 0.5;
+  transform: rotate(50deg);
+  position: absolute;
+  top: 150%;
+  left: -200px;
+  transition: .5s;
+}
+.services .single-service-card:hover::after{
+  width: 325%;
+  top: -100%;
+
+}
+.services .single-service-card i {
+  color: #72e2ae;
+  margin: 40px 0px 20px 0px;
+  font-size: 4.8rem;
+}
+.services .single-service-card:hover i {
+  color: #00ff37;
+}
+.services .single-service-card h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 5px 0px 10px 0px;
+  text-transform: capitalize;
+}
+.services .single-service-card p {
+  text-align: center;
+  width: 100%;
+  color: rgba(163, 236, 227, 0.746);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .container {
+    max-width: 550px;
+  }
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service .service-title h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 560px;
+  }
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service .service-title h1 {
+    font-size: 3rem;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 980px;
+  }
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1180px;
+  }
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1380px;
+  }
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
